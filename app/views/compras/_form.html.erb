@@ -1,10 +1,10 @@
-<%= form_with(model: compra) do |form| %>
-  <% if compra.errors.any? %>
+<%= form_for(@compra, html:{:multipart =>true}) do |form| %>
+  <% if @compra.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(compra.errors.count, "error") %> prohibited this compra from being saved:</h2>
+      <h2><%= pluralize(@compra.errors.count, "error") %> prohibited this compra from being saved:</h2>
 
       <ul>
-        <% compra.errors.each do |error| %>
+        <% @compra.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -25,7 +25,12 @@
     <%= form.label :produto_id, style: "display: block" %>
     <%= form.select :produto_id, Produto.all.collect{|p| [p.nome , p.id]} %>
   </div>
-
+  <br>
+  <div>
+    <%= form.label :arquivo, "Anexo" %>
+    <%= form.file_field :arquivo %>
+  </div>
+<br>
   <div>
     <%= form.submit %>
   </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mercadoapp</title>
+    <title>MercadoYuri</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +10,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div>
+      <ul>
+        <li>
+        <%= link_to '[INICIO]', root_path %>
+        </li>
+      </ul>
+    <%= yield %> 
+    </div>
   </body>
 </html>

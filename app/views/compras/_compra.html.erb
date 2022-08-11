@@ -1,17 +1,21 @@
 <div id="<%= dom_id compra %>">
   <p>
-    <strong>Data compra:</strong>
-    <%= compra.data_compra %>
+    <strong>Data da compra:</strong>
+    <%= date_new(compra.data_compra) %>
   </p>
 
   <p>
     <strong>Cliente:</strong>
-    <%= compra.cliente_id %>
+    <%= compra.cliente.nome %>
   </p>
 
   <p>
     <strong>Produto:</strong>
-    <%= compra.produto_id %>
+    <%= compra.produto.nome %>
   </p>
 
+  <p><strong>Descrição:</strong><%= compra.produto.descricao %></p>
+  
+  <p><strong>Preço:</strong><%= compra.produto.preco %></p>
+  
 </div>
