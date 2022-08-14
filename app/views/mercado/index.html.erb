@@ -3,16 +3,24 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Market</title>
+    <title>Mercado</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <%= stylesheet_link_tag   'index' , media: 'all', 'data-turbolinks-track':  'reload' %>
+    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-<h1>Mercado do Yuri<h1/>
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <h1>Mercado</h1>
+    </a>
+  </div>
+</nav>
 
-<p><%= link_to 'Cliente', clientes_path %></p>
-<p><%= link_to 'Produtos', produtos_path %></p>
-<p><%= link_to 'Compras', compras_path %></p>
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+  <button type="button" class="btn btn-outline-secondary"><%= link_to 'Cliente', clientes_path %></button>
+  <button type="button" class="btn btn-outline-secondary"><%= link_to 'Produtos', produtos_path %></button>
+  <button type="button" class="btn btn-outline-secondary"><%= link_to 'Compras', compras_path %></button>
+</div>
 </body>
 </html>

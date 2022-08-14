@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag   'index' , media: 'all', 'data-turbolinks-track':  'reload' %>
 <%= form_for(@compra, html:{:multipart =>true}) do |form| %>
   <% if @compra.errors.any? %>
     <div style="color: red">
@@ -10,21 +11,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :data_compra, style: "display: block" %>
-    <%= form.date_field :data_compra %>
-  </div>
-
-  <div>
-    <%= form.label :cliente_id, style: "display: block" %>
-    <%= form.select :cliente_id, Cliente.all.collect{|c| [c.nome, c.id]} %>
-  </div>
-
-  <div>
-    <%= form.label :produto_id, style: "display: block" %>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"> <%= form.label :data_compra, style: "display: block" %> <%= form.date_field :data_compra %> </label>
+</div>
+<div class="mb-3">
+      <label>
+      <%= form.label :cliente_id, style: "display: block" %>
+      <%= form.select :cliente_id, Cliente.all.collect{|c| [c.nome, c.id]} %>
+      </label>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"><%= form.label :produto_id, style: "display: block" %>
     <%= form.select :produto_id, Produto.all.collect{|p| [p.nome , p.id]} %>
   </div>
+  </label>
+
   <br>
   <div>
     <%= form.label :arquivo, "Anexo" %>
@@ -32,6 +33,6 @@
   </div>
 <br>
   <div>
-    <%= form.submit %>
+  <%= form.submit %>
   </div>
 <% end %>

@@ -1,9 +1,14 @@
-<h1>Nova Compra</h1>
+<div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <h1>Nova Compra</h1>
+    </a>
+</div>
+
 
 <%= render "form", compra: @compra %>
 
 <br>
 
 <div>
-  <%= link_to "Voltar", compras_path %>
+<button type="button" class="btn btn-outline-secondary"> <%= link_to "Voltar", compras_path %></button>
 </div>

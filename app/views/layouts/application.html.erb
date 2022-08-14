@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MercadoYuri</title>
+    <title>Mercadoapp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
-
   <body>
+  
     <div>
       <ul>
-        <li>
-        <%= link_to '[INICIO]', root_path %>
+        <ul class="nav justify-content-center">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">
+        <%= link_to 'INICIO', root_path , class: "btn btn-primary" %>
+        </a>
         </li>
       </ul>
     <%= yield %> 

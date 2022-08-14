@@ -1,9 +1,15 @@
-<h1>Novo cliente</h1>
+<%= stylesheet_link_tag   'index' , media: 'all', 'data-turbolinks-track':  'reload' %>
+<div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <h1>Novo cliente</h1>
+    </a>
+</div>
+
 
 <%= render "form", cliente: @cliente %>
 
 <br>
 
 <div>
-  <%= link_to "Voltar", clientes_path %>
+<button type="button" class="btn btn-outline-secondary">  <%= link_to "Voltar", clientes_path %> </button>
 </div>

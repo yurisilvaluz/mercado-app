@@ -1,12 +1,19 @@
 <div id="<%= dom_id cliente %>">
   <p>
-    <strong>Nome:</strong>
-    <%= cliente.nome %>
-  </p>
 
-  <p>
-    <strong>Data de nascimento:</strong>
-    <%= date_new(cliente.data_nascimento) %>
-  </p>
 
 </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Data de Nascimento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"> <%= cliente.nome %></th>
+      <td><%= date_new(cliente.data_nascimento) %></td>
+    </tr>
+  </tbody>
+</table>

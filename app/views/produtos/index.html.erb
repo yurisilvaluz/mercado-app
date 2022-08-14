@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag   'index' , media: 'all', 'data-turbolinks-track':  'reload' %>
 
 <h1>Produtos</h1>
+<button type="button" class="btn btn-outline-secondary"><%= link_to "Novo produto", new_produto_path %></button>
+
+<hr>
 
 <div id="produtos">
   <% @produtos.each do |produto| %>
     <%= render produto %>
     <p>
-      <%= link_to "Mostrar", produto %>
+    <button type="button" class="btn btn-outline-secondary"><%= link_to "Mostrar", produto %></button>
+      
     </p>
   <% end %>
 </div>
 
-<%= link_to "Novo produto", new_produto_path %>
+
+
+
