@@ -15,13 +15,13 @@
     <%= form.label :nome, style: "display: block" %>
     <%= form.text_field :nome %>
   </div>
-
+<br>
   <div>
     <%= form.label :data_nascimento, style: "display: block" %>
     <%= form.date_field :data_nascimento %>
   </div>
-
+<br>
   <div>
-  <%= form.submit %>
+  <%= form.submit nil, class: 'btn btn-primary' %> 
   </div>
 <% end %>

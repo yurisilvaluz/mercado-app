@@ -52,7 +52,7 @@ class ClientesController < ApplicationController
     @cliente.destroy
 
     respond_to do |format|
-      format.html { redirect_to clientes_url, notice: "Cliente was successfully destroyed." }
+      format.html { redirect_to clientes_url, notice: "Cliente deletado com sucesso." }
       format.json { head :no_content }
     end
   end
