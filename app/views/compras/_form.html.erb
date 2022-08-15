@@ -2,7 +2,7 @@
 <%= form_for(@compra, html:{:multipart =>true}) do |form| %>
   <% if @compra.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(@compra.errors.count, "error") %> prohibited this compra from being saved:</h2>
+      <h2><%= pluralize(@compra.errors.count, "error") %></h2>
 
       <ul>
         <% @compra.errors.each do |error| %>
